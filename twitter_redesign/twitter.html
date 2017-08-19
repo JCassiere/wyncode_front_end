@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter Redesign</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<nav class="navbar navbar-toggleable-xs navbar-light bg-faded">
+	  <button class="navbar-toggler navbar__avatar-pic-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <img class="avatar-pic" src="lego-head.jpg" alt="Profile Picture">
+    </button>
+		<a href="#" class="navbar__twitter-icon"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav mr-auto">
+	    	<section class="navbar__pencil-section">
+		      <li class="nav-item navbar__pencil">
+		        <a class="nav-link" href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+		      </li>
+	      </section>
+	      <section class="navbar__others-section">
+		      <li class="nav-item">
+		        <a class="nav-link" href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link disabled" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link disabled" href="#"><i class="fa fa-hashtag" aria-hidden="true"></i></a>
+		      </li>
+	      </section>
+	    </ul>
+	  </div>
+    <form class="form-inline">
+			<input type="text" class="search-rounded" placeholder="Search">
+			<button type="button" class="search-button"><i class="fa fa-search fa" aria-hidden="true"></i></button>
+    </form>
+	</nav>
+	<section class="page-info">
+		<section class="page-info__profile-pic"><img src="kerem.png" alt="Profile Picture"></section>
+		<section class="page-info__name">Kerem Suer</section>
+		<section class="page-info__bio">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.</section>
+		<section class="page-info__website"><i class="fa fa-link" aria-hidden="true"></i><a href="#">www.kerem.co</a></section>
+		<section class="page-info__follow"><button type="button">Follow</button></section>
+	</section>
+	<section class="posts">
+		<section class="post">
+			<section class="post__profile-pic"><img src="kerem.png" alt="Profile Picture"></section>
+			<section class="post-body">
+			  <section class="post-header">
+			  	<section class="post-header__name-and-handle">
+					  <span class="post-header__name">Kerem Suer</span><span class="post-header__handle">@kerem</span>
+				  </section>
+				  <section class="post-header__time">
+				  	2m
+				  </section>
+			  </section>
+				<section class="post-body__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.</section>
+				<section class="post-footer">
+				  <section class="post-footer__left">
+						<i class="fa fa-share" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-refresh" aria-hidden="true"><span class="post-footer__number">20</span></i>
+						<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+					</section>
+					<section class="post-footer__right">
+						<i class="fa fa-expand" aria-hidden="true"></i>
+					</section>
+				</section>
+			</section>
+		</section>
+		<section class="post">
+			<section class="post__profile-pic"><img src="half-face.png" alt="Profile Picture"></section>
+			<section class="post-body">
+			  <section class="post-header">
+			  	<section class="post-header__name-and-handle">
+					  <span class="post-header__name"><i class="fa fa-refresh green-retweet" aria-hidden="true"></i>AxelHerrmann</span><span class="post-header__handle">@axel_herrmann</span>
+				  </section>
+				  <section class="post-header__time">
+				  	1h
+				  </section>
+			  </section>
+				<section class="post-body__text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</section>
+				<section class="post-footer">
+				  <section class="post-footer__left">
+						<i class="fa fa-share" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-refresh" aria-hidden="true"></i>
+						<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+					</section>
+					<section class="post-footer__right">
+						<i class="fa fa-expand" aria-hidden="true"></i>
+					</section>
+				</section>
+			</section>
+		</section>
+		<section class="post">
+			<section class="post__profile-pic"><img src="kerem.png" alt="Profile Picture"></section>
+			<section class="post-body">
+			  <section class="post-header">
+			  	<section class="post-header__name-and-handle">
+					  <span class="post-header__name">Kerem Suer</span><span class="post-header__handle">@kerem</span>
+				  </section>
+				  <section class="post-header__time">
+				  	5h
+				  </section>
+			  </section>
+        <iframe class="post-body__video" height="315" src="https://www.youtube.com/embed/FV5mib31IhA" frameborder="0" allowfullscreen></iframe>
+        <section class="post-footer">
+				  <section class="post-footer__left">
+						<i class="fa fa-share" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-refresh" aria-hidden="true"></i>
+						<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+					</section>
+					<section class="post-footer__right">
+						<i class="fa fa-expand" aria-hidden="true"></i>
+					</section>
+				</section>
+			</section>
+		</section>
+		<section class="post">
+			<section class="post__profile-pic"><img src="kerem.png" alt="Profile Picture"></section>
+			<section class="post-body">
+			  <section class="post-header">
+			  	<section class="post-header__name-and-handle">
+					  <span class="post-header__name">Kerem Suer</span><span class="post-header__handle">@kerem</span>
+				  </section>
+				  <section class="post-header__time">
+				  	Yesterday
+				  </section>
+			  </section>
+				<section class="post-body__text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui oficia deserunt mollit anim id est laborum.</section>
+				<section class="post-footer">
+				  <section class="post-footer__left">
+						<i class="fa fa-share" aria-hidden="true"></i>
+						<i class="fa fa-star" aria-hidden="true"></i>
+						<i class="fa fa-refresh" aria-hidden="true"></i>
+						<i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+					</section>
+					<section class="post-footer__right">
+						<i class="fa fa-expand" aria-hidden="true"></i>
+					</section>
+				</section>
+			</section>
+		</section>
+	</section>
+</body>
+</html>
