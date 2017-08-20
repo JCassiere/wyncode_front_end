@@ -13,6 +13,9 @@ body {
 	background-color: #FFFBF5;
 	padding-top: 2vw;
 	padding-bottom: 2vw;
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
 }
 
 .navbar__avatar-pic-button, .navbar__avatar-link {
@@ -116,17 +119,24 @@ button:focus {
 	justify-content: center;
 	align-items: center;
 	margin: auto 1vw;
-/*	margin-left: 2vw;
-	padding-right: 2vw;
-*/	border-radius: 50%;
+	border-radius: 50%;
 	border: 2px solid #F1EDE8;
 	font-size: 2.5vw;
 	height: 5vw;
 	width: 5vw;
 }
 
+.nav-item:hover, 
+.search-button:hover,
+.navbar__twitter-icon:hover,
+.navbar__avatar-pic-button:hover,
+.navbar__avatar-link:hover {
+	transform: scale(1.25, 1.25);
+}
+
 .navbar__pencil {
 	background-color: #80A8CC;
+	border: none;
 }
 
 main {
@@ -139,7 +149,7 @@ main {
 }
 
 .page-info {
-	order: 1;
+	order: 0;
 	width: 100%;
 	background-color: #80A8CC;
 	padding: 3vw 10vw;
@@ -148,6 +158,7 @@ main {
 	height: 40vw;
 	color: white;
 	justify-content: space-around;
+	transition: width 1s;
 }
 
 .page-info section {
@@ -185,6 +196,11 @@ main {
 	border-radius:5em; 
 }
 
+.page-info__follow button:hover {
+	background-color: white;
+  color: #6C94B8;
+}
+
 .page-info__name {
 	align-items: flex-end;
 	font-weight: bolder;
@@ -218,6 +234,7 @@ main {
 	order: 2;
 	background-color: #F2EEE8;
 	padding: 5vw;
+	transition: width 1s;
 }
 
 .post {
@@ -241,7 +258,7 @@ main {
 
 .post-body {
 	font-size: 1em;
-	width: 80%;
+	width: 85%;
 }
 
 .post-header {
@@ -281,6 +298,10 @@ main {
 	margin-top: 10px;
 }
 
+.post-footer i:hover {
+	transform: scale(1.25, 1.25);
+}
+
 
 .post-footer__left i {
 	margin: auto 12px;
@@ -295,21 +316,21 @@ main {
 	padding-right: 12px;
 }
 
-.trending, .stats, .activities {
+.trending, .stats, .activities, .who-to-follow {
 	display: none;
+	transition: width 1s;
 }
 
 @media (min-width: 768px) {
 	.navbar {
-		padding-top: 0;
-		padding-bottom: 0;
-	}
+    padding: 0
+  }
 
   .navbar-collapse {
   	order: 0;
-  	width: 30%!important;
+  	width: 45%!important;
   	padding-top: 0;
-  	height: 8vw;
+  	height: 3.5rem;
   }
 
   .navbar__pencil-section {
@@ -318,33 +339,49 @@ main {
   }
 
   .nav-item {
-		font-size: 2vw;
-		height: 5vw;
-		width: 5vw;
+		font-size: 1rem;
+		height: 2rem;
+		width: 2rem;
 	}
 
   .navbar__twitter-icon {
   	order: 1;
   	width: 10%;
+  	font-size: 1.8rem;
   }
 
   .form-inline {
 		order: 2;
-		width: 40%;
+		width: 35%;
+		font-size: 0.9rem;
+		justify-content: flex-end;
+	}
+
+	.search-rounded { 
+		border: 1px solid #E3DFD8;
+		padding: 0.25rem 1rem;
+		width: 60%;
+	}
+
+	.search-button {
+		margin-left: -2rem;
 	}
 
   .navbar__avatar-link {
+  	margin-left: 2rem;
   	order: 3;
-  	width: 20%;
+  	width: 10%;
   	display: flex;
+  	max-width: 2rem;
   }
 
 	main {
 		flex-flow: column wrap;
-		height: 115vw;
+		height: 104vw;
 	}
 
 	.page-info {
+		order: 1;
 		align-items: center;
 		width: 30%;
 		height: 40%;
@@ -354,7 +391,7 @@ main {
 
 	.page-info__profile-pic {
 		width: 100%;
-		height: 30%;
+		height: 40%;
 	}
 
 	.page-info__profile-pic img {
@@ -365,35 +402,34 @@ main {
 	.page-info .page-info__name {
 		height: 10%;
 		align-items: center;
-		font-size: 1.5vw;
+		font-size: 1.4vw;
 	}
 
 	.page-info__bio {
 		align-items: flex-start;
 		order: 3;
 		width: 100%;
-		height: 30%;
+		height: 25%;
 		padding-left: 0;
 		padding-right: 0;
-		font-size: 1.5vw;
+		font-size: 1.4vw;
 	}
 
 	.page-info__website {
 		height: 10%;
-		font-size: 1.5vw;
+		font-size: 1.4vw;
 	}
 
 	.page-info__follow {
 		order: 5;
-		height: 20%;
-		font-size: 1.5vw;
+		height: 15%;
+		font-size: 1.4vw;
 	}
 
 	.trending {
 		font-size: 1.3vw;
 		padding-top: 4vw;
 		padding-left: 2.5vw;
-		margin-top: 
 		background-color: #FFFBF5;
 		order: 2;
 		display: flex;
@@ -439,13 +475,18 @@ main {
 		order: 4;
 		width: 70%;
 		height: 100%;
-		font-size: 1.3vw;
+		font-size: 1.2vw;
+		padding: 25px;
+	}
+
+	.post {
+		padding: 20px;
 	}
 
 	.stats {
 		background-color: #FFFBF5;
 		display: flex;
-		margin-bottom: 5vw;
+		margin-bottom: 25px;
 	}
 
 	.stats__stat {
@@ -456,6 +497,10 @@ main {
 		flex-direction: column;
 		align-items: center;
 		width: 25%;
+	}
+
+	.stats__stat:hover {
+		text-decoration: none;
 	}
 
 	.stats__stat .stats__number {
@@ -487,29 +532,155 @@ main {
 
 @media (min-width: 992px) {
 
+	main {
+		height: 100vw;
+	}
+
 	.page-info {
-		width: 20%;
+		width: 21.875%;
+		padding: 10px;
+		height: 30%;
+		/*font-size: 1.7vw;*/
+	}
+
+	.page-info section {
+		font-size: 1.1vw;
+	}
+
+	.page-info__profile-pic img {
+		max-width: 8vw;
 	}
 
 	.activities {
-		width: 20%
+		width: 21.875%;
+		height: 50%;
+		font-size: 1.1vw;
 	}
 
 	.media {
-		display: flex;
-		height: 30%;
-		width: 20%;
+		display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	  grid-template-rows: repeat(3, 1fr);
+		height: 20%;
+		width: 21.875%;
 		order: 2;
 	}
 
-	.posts {
-		width: 60%;
+	.media a {
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	.media a:hover {
+		transform: scale(1.25, 1.25);
+	}
+
+	.media__shoes {
+		background-image: url("shoes.png");
+	}
+
+	.media__tea {
+		background-image: url("tea.png");
+	}
+
+	.media__cactus {
+		background-image: url("cactus.png");
+	}
+
+	.media__chair {
+		background-image: url("chair.png");
+	}
+
+	.media__lemons {
+		background-image: url("lemons.png");
+	}
+
+	.media__leaf {
+		background-image: url("leaf.png");
+	}
+
+	.media__bridge {
+		background-image: url("bridge.png");
+	}
+
+	.media__buoy {
+		background-image: url("buoy.png");
+	}
+
+	.media__clothesline {
+		background-image: url("clothesline.png");
+	}
+
+  .posts {
+		width: 56.25%;
 	}
 
 	.trending {
 		font-size: 1.1vw;
-		width: 20%;
+		width: 21.875%;
 		order: 5;
+		height: auto;
 	}
-  
+
+	.who-to-follow {
+		display: flex;
+		flex-direction: column;
+		order: 6;
+		width: 21.875%;
+		font-size: 1.1vw;
+		padding: 4vw 2.5vw;
+		background-color: #FFFBF5;
+	}
+
+	.who-to-follow__title {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.who-to-follow__title a {
+		color: #80A8CC;
+	}
+
+	.who-to-follow__person {
+		display: flex;
+		align-items: center;
+		margin-bottom: 20px;
+	}
+
+	.who-to-follow__person img {
+		height: 3.5vw;
+		width: 3.5vw;
+		border-radius: 50%;
+	}
+
+	.name-and-description {
+		padding-left: 10px;
+		width: 75%;
+	}
+
+	.name-and-description p {
+		margin: 0;
+	}
+
+	.name-and-description__name {
+		color: #605E58;
+		font-weight: bolder;
+	}
+
+	.name-and-description__description {
+		color: #C6C1B0;
+		font-weight: lighter;
+	}
+
+	.who-to-follow__person a {
+		color: #605E58;
+		margin-left: 10px;
+		font-size: 1.2vw;
+	}
+
+	.who-to-follow__person i:hover {
+		transform: scale(1.25, 1.25);
+	}
 }
