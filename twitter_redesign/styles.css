@@ -1,9 +1,8 @@
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	box-sizing: border-box;
-	display: flex;
-	flex-flow: row wrap;
+	width: 100%;
+	font-size: 1em;
 }
+
 
 .navbar {
 	order: 0;
@@ -12,15 +11,11 @@ body {
 	align-items: center;
 	justify-content: center;
 	background-color: #FFFBF5;
-	padding-top: 3em;
-	padding-bottom: 3em;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
 }
 
-/*.navbar-nav {
-	display: none;
-}*/
-
-.navbar__avatar-pic-button {
+.navbar__avatar-pic-button, .navbar__avatar-link {
 	border: none;
 	outline: none;
 	display: flex;
@@ -31,16 +26,20 @@ body {
 	border-radius: 50%;
 }
 
+.navbar__avatar-link {
+	display: none;
+}
+
 .avatar-pic {
 	width: 100%;
-	max-width: 5em;
+	max-width: 5vh;
 	border-radius: 50%;
 }
 
 .navbar__twitter-icon {
 	color: #80A8CC;
 	order: 1;
-	font-size: 4em;
+	font-size: 5vh;
 	width: 20%;
 	text-align: center;
 }
@@ -50,14 +49,14 @@ body {
 	order: 2;
 	width: 60%;
 	align-items: center;
-	font-size: 3em;
+	font-size: 2.5vh;
 	color: #C6C1B0;
 	padding-left: 0;
 }
 
 .search-rounded { 
 	border: 1px solid #E3DFD8;
-	padding: 15px 30px;
+	padding: 1vh 4vw;
 	/*margin: 3px; */
 	border-radius:5em; 
 	width: 100%;
@@ -68,9 +67,8 @@ body {
 	color: #606878;
 	background: none;
 	border: none;
-	margin: -3.5em;
-	min-width: 4em;
-	min-height: 4em;
+	margin-left: -7vw;
+	height: 100%;
 }
 
 button:focus {
@@ -106,46 +104,54 @@ button:focus {
 .navbar-collapse {
 	order: 4;
 	width: 90%;
-	padding-top: 3em;
+	padding-top: 2vh;
 }
 
 .navbar-nav section {
 	display: flex;
-	justify-content: center;
 }
 
 .nav-item {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
-	border-radius: 50%;
+	margin: auto 1vw;
+/*	margin-left: 2vw;
+	padding-right: 2vw;
+*/	border-radius: 50%;
 	border: 2px solid #F1EDE8;
-	font-size: 2em;
-	height: 10vw;
-	width: 10vw;
+	font-size: 2.5vh;
+	height: 5vh;
+	width: 5vh;
 }
 
 .navbar__pencil {
 	background-color: #80A8CC;
 }
 
+main {
+	order: 1;
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: row wrap;
+	font-size: 2.2vw;
+}
+
 .page-info {
 	order: 1;
 	width: 100%;
 	background-color: #80A8CC;
-	padding: 30px 100px;
+	padding: 3vh 10vw;
 	display: flex;
 	flex-flow: column wrap;
-	height: 20em;
+	height: 40vh;
 	color: white;
+	justify-content: space-around;
 }
 
 .page-info section {
 	display: flex;
-	align-items: center;
 	justify-content: center;
 	text-align: center;
 }
@@ -153,21 +159,21 @@ button:focus {
 .page-info__profile-pic {
 	order: 0;
 	width: 30%;
-	height: 80%;
-	align-items: flex-start;
+	height: 70%;
+	align-items: center;
 }
 
 .page-info__profile-pic img {
 	border-radius: 50%;
-	height: 80%;
-	max-width: 10em;
+	/*height: 80%;*/
+	max-width: 15vh;
 }
 
 .page-info__follow {
-	font-size: 1.6em;
 	order: 1;
 	width: 30%;
-	height: 20%;
+	height: 30%;
+	align-items: flex-start;
 }
 
 .page-info__follow button { 
@@ -180,7 +186,7 @@ button:focus {
 }
 
 .page-info__name {
-	font-size: 1.6em;
+	align-items: flex-end;
 	font-weight: bolder;
 	order: 2;
 	height: 20%;
@@ -188,20 +194,19 @@ button:focus {
 }
 
 .page-info__bio {
-	font-size: 1.6em;
+	align-items: center;
+	font-weight: lighter;
 	order: 3;
 	height: 60%;
 	width: 70%;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 7vw;
+	padding-right: 7vw;
 }
 
 .page-info__website {
-	font-size: 1.6em;
 	order: 4;
 	height: 20%;
 	width: 70%;
-	padding-top: 10px;
 }
 
 .page-info__website a {
@@ -212,32 +217,30 @@ button:focus {
 .posts {
 	order: 2;
 	background-color: #F2EEE8;
-	padding: 50px;
+	padding: 5vw;
 }
 
 .post {
 	background-color: #FFFBF5;
 	border-bottom: 1px solid #F1EDE8;
-	padding:30px;
+	padding: 3vw;
 	display: flex;
 	flex-flow: row wrap;
 }
 
 .post__profile-pic {
 	text-align: center;
-	padding-top: 15px;
-	padding-left: 5px;
-	padding-right: 25px;
-	width: 20%;
+	width: 15%;
+	padding-right: 3vw;
 }
 
 .post__profile-pic img {
 	border-radius: 50%;
-	max-width: 6em;
+	max-width: 10vw;
 }
 
 .post-body {
-	font-size: 1.6em;
+	font-size: 1em;
 	width: 80%;
 }
 
@@ -267,6 +270,7 @@ button:focus {
 
 .post-body__video {
 	width: 100%;
+	height: 40vw;
 	margin-top: 10px;
 }
 
@@ -289,4 +293,168 @@ button:focus {
 .green-retweet {
 	color: #ACD373;
 	padding-right: 12px;
+}
+
+.trending {
+	display: none;
+}
+
+.stats {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.navbar {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+  .navbar-collapse {
+  	order: 0;
+  	width: 30%!important;
+  	padding-top: 0;
+  	height: 8vw;
+  }
+
+  .navbar__pencil-section {
+  	height: 100%;
+  	border-right: 2px solid #F1EDE6;
+  }
+
+  .nav-item {
+		font-size: 2vw;
+		height: 5vw;
+		width: 5vw;
+	}
+
+  .navbar__twitter-icon {
+  	order: 1;
+  	width: 10%;
+  }
+
+  .form-inline {
+		order: 2;
+		width: 40%;
+	}
+
+  .navbar__avatar-link {
+  	order: 3;
+  	width: 20%;
+  	display: flex;
+  }
+
+	main {
+		flex-flow: column wrap;
+		height: 115vw;
+	}
+
+	.page-info {
+		align-items: center;
+		width: 30%;
+		height: 40%;
+		padding-left: 3vw;
+		padding-right: 3vw;
+	}
+
+	.page-info__profile-pic {
+		width: 100%;
+		height: 30%;
+	}
+
+	.page-info .page-info__name {
+		height: 10%;
+		align-items: center;
+		font-size: 1.5vw;
+	}
+
+	.page-info__bio {
+		align-items: flex-start;
+		order: 3;
+		width: 100%;
+		height: 30%;
+		padding-left: 0;
+		padding-right: 0;
+		font-size: 1.5vw;
+	}
+
+	.page-info__website {
+		height: 10%;
+		font-size: 1.5vw;
+	}
+
+	.page-info__follow {
+		order: 5;
+		height: 20%;
+		font-size: 1.5vw;
+	}
+
+	.trending {
+		font-size: 1.3vw;
+		padding-top: 3em;
+		padding-left: 2.5em;
+		margin-top: 
+		background-color: #FFFBF5;
+		order: 2;
+		display: flex;
+		flex-direction: column;
+		width: 30%;
+		height: 50%;
+	}
+
+	.trending a {
+		color: #80A8CC;
+	}
+
+	.posts {
+		order: 3;
+		width: 70%;
+		height: 100%;
+		font-size: 1.3vw;
+	}
+
+	.stats {
+		background-color: #FFFBF5;
+		display: flex;
+		margin-bottom: 5vw;
+	}
+
+	.stats__stat {
+		color: #C6C1B0;
+		padding: 2vw;
+		padding-bottom: 1.5vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 25%;
+	}
+
+	.stats__stat .stats__number {
+		color: #605E58;
+		font-weight: bolder;
+		font-size: 1.5vw;
+	}
+
+	.stats__tweets {
+		border-bottom: 0.5vw solid #80A8CC;
+	}
+
+	.post-body__video {
+		height: 28vw;
+	}
+
+	.post__profile-pic {
+		text-align: center;
+		width: 15%;
+		padding-right: 3vw;
+	}
+
+	.post__profile-pic img {
+		border-radius: 50%;
+		max-width: 5vw;
+	}
+
+	
+}
+
+@media screen and (min-width: 1950px) {
 }
